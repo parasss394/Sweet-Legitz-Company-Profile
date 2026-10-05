@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Legitz - Company Profile</title>
+
+  <!-- Menghubungkan file CSS -->
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+  <!-- ========== HEADER / NAVBAR ========== -->
+  <header>
+    <div class="container navbar">
+      <h1 class="logo">Sweet Legitz</h1>
+
+      <!-- Tombol menu untuk tampilan HP (hamburger menu) -->
+      <button id="menu-btn" class="menu-btn">☰</button>
+
+      <!-- Daftar menu navigasi -->
+      <nav id="nav-menu" class="nav-menu">
+        <a href="#home">Beranda</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#services">Varian</a>
+        <a href="#team">Keunggulan</a>
+        <a href="#contact">Pesan Sekarang</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== SECTION: HOME / HERO ========== -->
+  <!-- Foto banner sudah punya judul & teks sendiri, jadi tidak perlu teks HTML tambahan di sini -->
+  <section id="home" class="hero">
+  </section>
+
+  <!-- ========== SECTION: ABOUT / TENTANG KAMI ========== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">Tentang Kami</h2>
+      <p>
+        Sweet Legitz adalah usaha yang menghadirkan Bika Ambon khas Ambon dengan
+        cita rasa autentik, tekstur lembut, dan kualitas terbaik. Kami menggunakan
+        bahan-bahan pilihan serta proses pembuatan yang higienis untuk menghasilkan
+        Bika Ambon yang lezat dan istimewa. Dengan semangat untuk mempertahankan
+        cita rasa tradisional, Sweet Legitz hadir untuk memberikan pengalaman
+        menikmati Bika Ambon yang selalu bikin kangen.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== SECTION: SERVICES / LAYANAN ========== -->
+  <section id="services" class="section section-yellow">
+    <div class="container">
+      <h2 class="section-title">Varian Bika Ambon</h2>
+
+      <!-- Kartu layanan, setiap div class="card" adalah satu produk -->
+      <div class="card-container">
+        <div class="card">
+          <h3>Bika Ambon Original</h3>
+          <p>Bika Ambon klasik dengan rasa autentik, tekstur lembut, dan aroma khas yang menggugah selera.</p>
+        </div>
+        <div class="card">
+          <h3>Bika Ambon Pandan</h3>
+          <p>Perpaduan tekstur lembut dengan aroma pandan yang harum dan rasa yang istimewa.</p>
+        </div>
+        <div class="card">
+          <h3>Bika Ambon Keju</h3>
+          <p>Bika Ambon lembut dengan perpaduan rasa gurih keju yang cocok untuk pecinta rasa unik.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION: TEAM / KEUNGGULAN ========== -->
+  <section id="team" class="section">
+    <div class="container">
+      <h2 class="section-title">Kelezatan dalam Setiap Gigitan</h2>
+
+      <div class="card-container">
+        <div class="card team-card">
+          <div class="avatar">🍰</div>
+          <h3>Rasa Autentik</h3>
+          <p>Menghadirkan cita rasa khas dengan tekstur lembut dan berserat.</p>
+        </div>
+        <div class="card team-card">
+          <div class="avatar">🥚</div>
+          <h3>Bahan Berkualitas</h3>
+          <p>Menggunakan bahan pilihan untuk menjaga kualitas setiap produk.</p>
+        </div>
+        <div class="card team-card">
+          <div class="avatar">❤️</div>
+          <h3>Dibuat dengan Hati</h3>
+          <p>Diproses dengan perhatian untuk menghadirkan rasa yang istimewa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION: CONTACT / KONTAK ========== -->
+  <section id="contact" class="section section-gray">
+    <div class="container">
+      <h2 class="section-title">Yuk, Pesan Sekarang!</h2>
+
+      <!-- Form kontak sederhana -->
+      <form id="contact-form">
+        <label for="name">Nama</label>
+        <input type="text" id="name" placeholder="Masukkan nama Anda" required>
+
+        <label for="whatsapp">Nomor WhatsApp</label>
+        <input type="tel" id="whatsapp" placeholder="Contoh: 081234567890" required>
+
+        <label for="message">Pesanan</label>
+        <textarea id="message" rows="4" placeholder="Contoh: Bika Ambon Original 2 kotak" required></textarea>
+
+        <button type="submit" class="btn">Kirim Pesanan</button>
+      </form>
+
+      <!-- Tempat menampilkan pesan setelah form dikirim -->
+      <p id="form-status"></p>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Sweet Legitz. Semua hak cipta dilindungi.</p>
+    </div>
+  </footer>
+
+  <!-- Menghubungkan file JavaScript -->
+  <!-- Diletakkan di paling bawah supaya HTML dimuat dulu sebelum JS jalan -->
+  <script src="sayascript.js"></script>
+
+</body>
+</html>
