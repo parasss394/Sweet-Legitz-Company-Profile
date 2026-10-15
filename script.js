@@ -89,7 +89,7 @@ contactForm.addEventListener("submit", function (event) {
   window.open(linkWhatsApp, "_blank");
 
   formStatus.style.color = "green";
-  formStatus.textContent = "Silakan kirim pesanan melalui WhatsApp.";
+  formStatus.textContent = "Pemesanan akan langsung diarahkan ke WA CS Sweet Legitz.";
 });
 
 
