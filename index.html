@@ -5,20 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sweet Legitz - Company Profile</title>
 
-  <!-- Menghubungkan file CSS -->
-  <link rel="stylesheet" href="style2.css">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ========== HEADER / NAVBAR ========== -->
+  
   <header>
     <div class="container navbar">
-      <h1 class="logo">Sweet Legitz</h1>
+    <div class="logo">
+      <img src="images/logo sweetlegitz.png" alt="Logo Sweet Legitz">
+      <h1>Sweet Legitz</h1>
+    </div>
+
 
       <!-- Tombol menu untuk tampilan HP (hamburger menu) -->
       <button id="menu-btn" class="menu-btn">☰</button>
 
-      <!-- Daftar menu navigasi -->
+      
       <nav id="nav-menu" class="nav-menu">
         <a href="#home">Beranda</a>
         <a href="#about">Tentang Kami</a>
@@ -29,12 +33,17 @@
     </div>
   </header>
 
-  <!-- ========== SECTION: HOME / HERO ========== -->
-  <!-- Foto banner sudah punya judul & teks sendiri, jadi tidak perlu teks HTML tambahan di sini -->
-  <section id="home" class="hero">
-  </section>
 
-  <!-- ========== SECTION: ABOUT / TENTANG KAMI ========== -->
+  
+<section id="home" class="hero">
+  <img src="images/bika.jpeg" class="banner aktif" alt="Banner Sweet Legitz">
+
+  <img src="images/slide2.png" class="banner" alt="Banner Sweet Legitz 2">
+
+  <img src="images/slide3.png" class="banner" alt="Banner Sweet Legitz 3">
+</section>
+
+  
   <section id="about" class="section">
     <div class="container">
       <h2 class="section-title">Tentang Kami</h2>
@@ -49,12 +58,12 @@
     </div>
   </section>
 
-  <!-- ========== SECTION: SERVICES / LAYANAN ========== -->
+  
   <section id="services" class="section section-yellow">
     <div class="container">
       <h2 class="section-title">Varian Bika Ambon</h2>
 
-      <!-- Kartu layanan, setiap div class="card" adalah satu produk -->
+      
       <div class="card-container">
         <div class="card">
           <h3>Bika Ambon Original</h3>
@@ -72,7 +81,7 @@
     </div>
   </section>
 
-  <!-- ========== SECTION: TEAM / KEUNGGULAN ========== -->
+  
   <section id="team" class="section">
     <div class="container">
       <h2 class="section-title">Kelezatan dalam Setiap Gigitan</h2>
@@ -97,40 +106,62 @@
     </div>
   </section>
 
-  <!-- ========== SECTION: CONTACT / KONTAK ========== -->
+  
   <section id="contact" class="section section-gray">
     <div class="container">
       <h2 class="section-title">Yuk, Pesan Sekarang!</h2>
 
       <!-- Form kontak sederhana -->
-      <form id="contact-form">
-        <label for="name">Nama</label>
-        <input type="text" id="name" placeholder="Masukkan nama Anda" required>
+<form id="contact-form">
+  <label for="name">Nama</label>
+  <input
+    type="text"
+    id="name"
+    placeholder="Masukkan nama Anda"
+    required
+  >
 
-        <label for="whatsapp">Nomor WhatsApp</label>
-        <input type="tel" id="whatsapp" placeholder="Contoh: 081234567890" required>
+  <label for="alamat">Alamat</label>
+  <textarea
+    id="alamat"
+    rows="3"
+    placeholder="Masukkan alamat pengiriman"
+    required
+  ></textarea>
 
-        <label for="message">Pesanan</label>
-        <textarea id="message" rows="4" placeholder="Contoh: Bika Ambon Original 2 kotak" required></textarea>
+  <label for="message">Pesanan</label>
+  <textarea
+    id="message"
+    rows="4"
+    placeholder="Contoh: Bika Ambon Original 2 kotak"
+    required
+  ></textarea>
 
-        <button type="submit" class="btn">Kirim Pesanan</button>
-      </form>
+  <button type="submit" class="btn">Pesan Sekarang</button>
+</form>
 
-      <!-- Tempat menampilkan pesan setelah form dikirim -->
+
+      
       <p id="form-status"></p>
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
-  <footer>
-    <div class="container">
-      <p>&copy; <span id="year"></span> Sweet Legitz. Semua hak cipta dilindungi.</p>
-    </div>
-  </footer>
+  
 
-  <!-- Menghubungkan file JavaScript -->
-  <!-- Diletakkan di paling bawah supaya HTML dimuat dulu sebelum JS jalan -->
-  <script src="sayascript.js"></script>
+<a href="#home" class="tombol-atas">⌃</a>
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Sweet Legitz. Semua hak cipta dilindungi.</p>
+  <p>
+    Dibuat oleh
+    <span class="nama">Farras al abiy</span>,
+    menggunakan HTML, CSS, dan JavaScript.
+  </p>
+</footer>
 
+
+  
+  
+  <script src="script.js"></script>
+  
 </body>
 </html>

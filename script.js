@@ -56,67 +56,51 @@ navLinks.forEach(function (satuLink) {
 });
 
 
-// ================================================
-// BAGIAN 2: FORM KONTAK (validasi + kirim pesanan ke WhatsApp)
-// ================================================
 
-// Ambil elemen form dan elemen tempat menampilkan pesan status
 const contactForm = document.getElementById("contact-form");
 const formStatus = document.getElementById("form-status");
 
-// Nomor WhatsApp TOKO (tempat pesanan akan masuk)
-// Ganti dengan nomor WA asli kamu, pakai kode negara 62, tanpa angka 0 di depan
-// Contoh: nomor 0812-3456-7890 ditulis jadi 6281234567890
+// Nomor WhatsApp pemilik Sweet Legitz
 const nomorWhatsAppToko = "6282230744667";
 
-// Pasang "pendengar submit" pada form
-// "submit" adalah event yang terjadi saat tombol "Kirim Pesanan" ditekan
 contactForm.addEventListener("submit", function (event) {
-
-  // Mencegah halaman reload/refresh saat form dikirim
-  // (perilaku default browser: form selalu me-reload halaman, ini kita matikan)
   event.preventDefault();
 
-  // Ambil nilai yang sudah diketik user di setiap kolom input
-  // .value artinya "ambil teks yang ada di dalam kolom itu sekarang"
-  const name = document.getElementById("name").value;
-  const whatsapp = document.getElementById("whatsapp").value; // nomor WA pemesan
-  const message = document.getElementById("message").value;
+  const name = document.getElementById("name").value.trim();
+  const alamat = document.getElementById("alamat").value.trim();
+  const message = document.getElementById("message").value.trim();
 
-  // Cek: apakah ada kolom yang masih kosong?
-  // tanda === artinya "sama dengan", tanda || artinya "atau"
-  const adaYangKosong = name === "" || whatsapp === "" || message === "";
-
-  if (adaYangKosong) {
-    // Jika ada yang kosong: tampilkan pesan merah, lalu hentikan kode di sini
+  if (!name || !alamat || !message) {
     formStatus.style.color = "red";
-    formStatus.textContent = "Mohon lengkapi semua field terlebih dahulu.";
-    return; // "return" artinya berhenti, baris di bawahnya tidak dijalankan
+    formStatus.textContent = "Mohon lengkapi semua data.";
+    return;
   }
 
-  // Susun teks pesan yang akan dikirim ke WhatsApp toko
-  // \n artinya "ganti baris baru" di dalam teks
   const teksPesan =
-    "Halo Sweet Legitz, saya mau pesan:\n" +
+    "Halo Sweet Legitz, saya ingin memesan Bika Ambon.\n\n" +
     "Nama: " + name + "\n" +
-    "No. WhatsApp: " + whatsapp + "\n" +
+    "Alamat Pengiriman: " + alamat + "\n" +
     "Pesanan: " + message;
 
-  // encodeURIComponent() mengubah teks biasa jadi format yang aman dipakai di URL
-  // (spasi, baris baru, dll diubah jadi kode khusus supaya link tidak rusak)
-  const teksUntukLink = encodeURIComponent(teksPesan);
+  const linkWhatsApp =
+    "https://wa.me/" + nomorWhatsAppToko +
+    "?text=" + encodeURIComponent(teksPesan);
 
-  // Susun link WhatsApp lengkap: nomor TOKO + pesan otomatis dari form
-  const linkWhatsApp = "https://wa.me/" + nomorWhatsAppToko + "?text=" + teksUntukLink;
-
-  // Buka link itu di tab baru (otomatis membuka aplikasi/situs WhatsApp)
   window.open(linkWhatsApp, "_blank");
 
-  // Tampilkan pesan status warna hijau
   formStatus.style.color = "green";
-  formStatus.textContent = "Mengarahkan ke WhatsApp...";
-
-  // Kosongkan kembali semua kolom form setelah berhasil dikirim
-  contactForm.reset();
-
+  formStatus.textContent = "Silakan kirim pesanan melalui WhatsApp.";
 });
+
+
+const banner = document.querySelectorAll(".banner");
+let index = 0;
+
+setInterval(function () {
+    banner[index].classList.remove("aktif");
+
+    index = (index + 1) % banner.length;
+
+    banner[index].classList.add("aktif");
+}, 3000);
+

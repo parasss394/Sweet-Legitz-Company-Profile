@@ -85,18 +85,22 @@ header {
     font-size: 26px;
     cursor: pointer;
 }
-
 .hero {
-    background-image: url("images/bika.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    position: relative;
     width: 100%;
-    aspect-ratio: 1920 / 720;
     margin-top: 65px;
-    color: #ffffff;
 }
 
+.banner {
+    width: 100%;
+    height: auto;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.banner.aktif {
+    display: block;
+}
 .section {
     padding: 60px 0;
 }
@@ -258,7 +262,7 @@ footer {
         width: 100%;
         text-align: center;
         margin-top: 15px;
-        background-color: rgba(0, 0, 0, 0.85);
+        background-color: #fef08a;
         padding: 15px 0;
         border-radius: 8px;
     }
@@ -270,4 +274,54 @@ footer {
     .navbar {
         flex-wrap: wrap;
     }
+}
+
+
+.tombol-atas {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    background: #fef08a;
+    color: #174D2B;
+    font-size: 40px;
+    text-decoration: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    color: white;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.logo h1 {
+    font-size: 22px;
+}
+
+
+.footer {
+    background-color: #174D2B;
+    padding: 20px;
+    text-align: center;
+    color: #9ca3af;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.nama {
+    color: #fef08a;
+    font-weight: bold;
 }
