@@ -71,7 +71,7 @@ contactForm.addEventListener("submit", function (event) {
   const message = document.getElementById("message").value.trim();
 
   if (!name || !alamat || !message) {
-    formStatus.style.color = "red";
+    formStatus.style.color = "green";
     formStatus.textContent = "Mohon lengkapi semua data.";
     return;
   }
